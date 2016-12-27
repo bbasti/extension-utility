@@ -1,5 +1,5 @@
 #!/bin/bash
 
 for file in $@
-do echo ${file##*.}
+do echo `basename ${file##*.}`
 done
