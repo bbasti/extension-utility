@@ -3,7 +3,7 @@
 for file in "$@"
 do 
 if [ -d "${file}" ] ; then
-	echo "Error: input is a directory!";
-else echo "${file##*.}";
+	echo "Error: input is a directory!"
+else echo "${file##*.}"
 fi
 done
