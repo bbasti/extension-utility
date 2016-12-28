@@ -4,6 +4,6 @@ for file in "$@"
 do 
 if [ -d "${file}" ] ; then
 	echo "Error: input is a directory!"
-else echo "${file##*.}"
+else echo $(basename ${file##*.})
 fi
 done
