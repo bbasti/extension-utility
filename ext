@@ -1,5 +1,9 @@
 #!/bin/bash
 
-for file in $@
-do echo `basename ${file##*.}`
+for file in "$@"
+do 
+if [ -d "${file}" ] ; then
+	echo "Error: input is a directory!";
+else echo "${file##*.}";
+fi
 done
